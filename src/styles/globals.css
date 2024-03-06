@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.container {
-}
 
 .overlay {
   position: absolute;
@@ -12,53 +10,39 @@
   width: 100%;
   height: 100vh;
 }
-@layer utilities {
+@layer base {
+  
+  .h2 {
+    @apply text-5xl text-white font-serif font-medium;
+  }
+  .btn-font {
+    @apply text-2xl text-white font-serif 
+  }
+  .btn {
+    @apply border border-primary
+  }
   .h1 {
     font-family: "Playfair Display", serif;
     font-weight: 700;
     /* Custom color */
-    color: hsl(var(--white));
-    font-size: 60px;
+    color: var(--white);
+    font-size: 80px;
     line-height: 1.1;
   }
-
-  /* Tablet styles */
-  @screen sm {
-    .h1 {
-      font-size: 80px; /* Adjust font size for tablet */
-    }
-  }
-
-  @screen lg {
-    .h1 {
-      font-size: 100px; /* Adjust font size for tablet */
-    }
-  }
-  .container .h2 {
-    font-size: 50px;
-    font-family: "Playfair Display", serif;
-    font-weight: 400;
-    /* Custom color */
-    color: hsl(var(--white));
-  }
+  
 }
+
+
 
 @layer base {
   body {
-    background: hsl(var(--background)); /* Apply light background by default */
+    background: #1b1716; /* Apply light background by default */
   }
+  /* h2 { */
+  /*   @apply text-5xl text-white font-serif font-semibold; */
+  /* } */
 
-  h2 {
-    font-size: 50px;
-    font-family: "Playfair Display", serif;
-    color: hsl(var(--white));
-    font-weight: 400;
-  }
 
-  body {
-    font-family: "Inter", sans-serif;
-    color: hsl(var(--white));
-  }
 
   :root {
     --background: 12 10.2% 9.6%;
@@ -71,7 +55,6 @@
     --card-foreground: 0 0% 97.2%;
     --border: 0 0% 18%;
     --input: 0 0% 21%;
-    --primary: 21.89 30% 52.5%;
     --primary-foreground: 0 0% 97.2%;
     --secondary: 0 26.7% 25.7%;
     --secondary-foreground: 0 0% 97.2%;
@@ -79,13 +62,13 @@
     --accent-foreground: 0 0% 97.2%;
     --destructive: 6 96% 56%;
     --destructive-foreground: 0 0% 100%;
-    --white: 0 0% 97.2%;
+    --white: "#f8f8f8";
     --ring: 0 0% 100%;
     --radius: 0.5rem;
   }
 
   .dark {
-    --white: 0 0% 97.2%;
+    --white: "#f8f8f8";
     --background: 12 10.2% 9.6%;
     --foreground: 0 0% 74%;
     --muted: 0 12% 17%;
@@ -96,7 +79,6 @@
     --card-foreground: 0 0% 79%;
     --border: 0 0% 18%;
     --input: 0 0% 21%;
-    --primary: 21.89 30% 52.5%;
     --primary-foreground: 0 0% 20%;
     --secondary: 0 26.7% 25.7%;
     --secondary-foreground: 0 0% 85%;

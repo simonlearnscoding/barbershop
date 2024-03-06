@@ -12,7 +12,8 @@ const config = {
 
   theme: {
     fontFamily: {
-      sans: ["Raleway", "sans-serif"], // Use Raleway as the default sans-serif font
+      sans: ["Raleway", "sans-serif"],
+      serif: ["Playfair Display", "serif"],
     },
     container: {
       center: true,
@@ -27,17 +28,14 @@ const config = {
     },
     extend: {
       colors: {
-        white: "hsl(var(--white))",
+        white: "#f8f8f8",
+        primary: "#ab7c61",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
 
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
