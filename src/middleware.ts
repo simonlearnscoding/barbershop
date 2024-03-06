@@ -1,7 +1,5 @@
 import { authMiddleware } from "@clerk/nextjs";
 
-import { withClerkMiddleware } from "@clerk/nextjs";
-import { NextResponse } from "next/server";
 
 export default authMiddleware({
   // Routes that can be accessed while signed out

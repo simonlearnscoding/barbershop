@@ -9,7 +9,11 @@ const config = {
     "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
+
   theme: {
+    fontFamily: {
+      sans: ["Raleway", "sans-serif"], // Use Raleway as the default sans-serif font
+    },
     container: {
       center: true,
       padding: "2rem",
@@ -23,8 +27,10 @@ const config = {
     },
     extend: {
       colors: {
+        white: "hsl(var(--white))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
+
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -78,7 +84,7 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/forms")],
 } satisfies Config;
 
 export default config;

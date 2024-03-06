@@ -12,11 +12,17 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model Post {
+// model User: {
+//     PhoneNumber String 
+//
+//   }
+model Appointments {
     id        Int      @id @default(autoincrement())
     name      String
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
-
-    @@index([name])
+    userId    String
+    barberId String
+    @@index([userId])
+    @@index([barberId])
 }

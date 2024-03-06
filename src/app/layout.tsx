@@ -23,12 +23,10 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-      <html lang="en">
-        <body className={`font-sans ${inter.variable}`}>
+      <html suppressHydrationWarning={true} lang="en">
+        <body className={`font-sans ${inter.variable} dark`}>
           <TRPCReactProvider>
-            <div className=" mx-auto flex  h-screen justify-center  md:w-[800px] lg:w-[1100px] 2xl:w-[1440px] ">
-              {children}
-            </div>
+            <div className="">{children}</div>
           </TRPCReactProvider>
         </body>
       </html>
